@@ -11,7 +11,7 @@ Allure Report - система отчетности
    
 git clone https://github.com/RedLosk/API-test-petstore
 
-3. Настройка виртуального окружения
+2. Настройка виртуального окружения
    
 python -m venv .venv
 
@@ -21,7 +21,7 @@ python -m venv .venv
 
 pip install -r requirements.txt
 
-Запустите автотесты:
+4. Запуск автотестов:
 
 pytest
 
