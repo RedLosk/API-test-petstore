@@ -91,13 +91,3 @@ allure generate ./allure-results -o ./allure-report --clean
 Откройте `allure-report/index.html` в браузере.
 
 
-## 📚 Дополнительные ресурсы
-
-- [Документация Pytest](https://docs.pytest.org/)
-- [Документация Allure](https://docs.qameta.io/allure/)
-- [Python Requests](https://requests.readthedocs.io/)
-
-## 👥 Авторы
-
-- Ваше имя - [GitHub](https://github.com/RedLosl)
-
