@@ -1,3 +1,5 @@
+import jsonschema
+from validators import validate_http_code
 import pytest
 from api_client import PetStoreAPI
 import endpoints
@@ -23,3 +25,15 @@ def create_order():
     order = generators.generate_order()
     response = PetStoreAPI.post(endpoints.store_order(), order)
     return response, order
+
+@pytest.fixture(scope="session")
+def pet_schema():
+    #Returns the schema for validating pets
+    from schemas import PET_SCHEMA
+    return PET_SCHEMA
+
+@pytest.fixture(scope="session")
+def inventory_schema():
+    #Returns the schematic for the inventory
+    from schemas import INVENTORY_SCHEMA
+    return INVENTORY_SCHEMA

@@ -48,3 +48,40 @@ def generate_user():
         "phone": f"+1{random.randint(1000000000, 9999999999)}",
         "userStatus": 0
     }
+
+def generate_invalid_pet():
+    #Generates invalid pet data for negative testing
+    return {
+        "id": "invalid_id",
+        "name": "",
+        "photoUrls": "not_an_array",
+        "status": "invalid_status"
+    }
+
+def generate_pet_with_custom_id(pet_id):
+    #Generates pet data with custom ID
+    return {
+        "id": pet_id,
+        "name": f"Pet_{random_string(5)}",
+        "photoUrls": [f"https://example.com/photo_{random_number(1, 5)}.jpg"],
+        "status": random.choice(["available", "pending", "sold"])
+    }
+
+def generate_order_with_pet_id(pet_id):
+    #Generates order data with specific pet_id
+    return {
+        "id": random_number(),
+        "petId": pet_id,
+        "quantity": random_number(1, 10),
+        "status": "placed",
+        "complete": False
+    }
+
+def generate_user_with_custom_data(user_id, username, email, password):
+    #Generates user data with custom fields
+    return {
+        "id": user_id,
+        "username": username,
+        "email": email,
+        "password": password
+    }
